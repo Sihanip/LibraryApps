@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Library Apps</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<main>
+		<div class="shadowText">
+			<h2 class="rainbow rainbow_text_animated">Selamat Datang di Library Apps</h2>
+		</div>
+		<section class="section_input">
+			<h2>Tambahkan Data Buku Baru</h2>
+			<form id="formAddBook" class="form_container">
+				<div class="input_container">
+					<label for="title">Judul</label>
+					<input type="text" name="title" id="title" required placeholder="masukkan judul buku">
+				</div>
+				<div class="input_container">
+					<label for="author">Penulis</label>
+					<input type="text" name="author" id="author" required placeholder="masukkan penulis buku">
+				</div>
+				<div class="input_container">
+					<label for="year">Tahun</label>
+					<input type="text" name="year" id="year" required placeholder="masukkan tahun buku">
+				</div>
+				<div class="checkbox_container">
+					<div class="input_check">
+						<input type="checkbox" name="isComplete" id="isComplete" class="checkbox">
+						<label for="isComplete">Sudah Dibaca?</label>
+					</div>
+				</div>
+				<button class="form_buttonUpdate" id="updateBook" type="button">Update</button>
+				<button type="button" class="form_button" id="saveBook">Tambahkan Buku +</button>
+			</form>
+		</section>
+
+		<section class="section_detail">
+			<h2>Detail Buku</h2>
+			<form id="searchBook">
+				<input type="text" class="search_input" id="cariJudul" placeholder="Cari Judul Buku">
+				<button type="submit" class="search_button">Cari</button>
+			</form>
+
+			<div class="detail_book_container">
+				<div class="card">
+					<h3>Sudah dibaca</h3>
+					<hr>
+					<div id="doneRead"> </div>
+				</div>
+				<div class="card">
+					<h3>Belum dibaca</h3>
+					<hr>
+					<div id="unRead"> </div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    margin: 4rem 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+input {
+    padding: 8px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 12px;
+}   
+
+.rainbow {
+    font-size: 32px;
+    margin-bottom: 22px;
+}
+
+.rainbow_text_animated {
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 5s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+
+
+.section_input {
+    width: 50%;
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding: 22px;
+}
+
+.input_container {
+    display: flex;
+    flex-direction: column;
+    margin: 14px 0;
+}
+
+.checkbox_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.input_check > label {
+    font-size: 14px;
+}
+
+.form_button {
+    padding: 8px 24px;
+    width: 100%;
+    border: 1px solid black;
+    background: black;
+    color: white;
+}
+
+.form_button:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
+
+.form_buttonUpdate {
+    padding: 8px 24px;
+    width: 100%;
+    border: 1px solid black;
+    background: black;
+    color: white;
+    display: none;
+}
+
+.form_buttonUpdate:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
+
+.section_detail {
+    margin-top: 22px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding: 22px;
+    width: 40%;
+}
+
+.search_input {
+    width: 64%;
+}
+
+.search_button {
+    padding: 8px 16px;
+    width: 35%;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+.detail_book_container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.card {
+    margin: 12px ;
+    border: 1px solid gray;
+    border-radius: 14px;
+}
+
+.card > h3 {
+    text-align: center;
+    margin: 12px 0;
+}
+
+.card_body{
+    padding: 12px;
+}
+
+.btn_opsi {
+    margin: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn_unread {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-weight: 600;
+}
+
+.btn_read {
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-weight: 600;
+}
+
+.btn_edit {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-weight: 600;
+}
+
+.btn_delete {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-weight: 600;
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+    .section_input, 
+    .section_detail {
+        width: 90%;
+    }
+
+    .btn_opsi {
+        margin-top: 12px;
+    }
+
+    .search_input {
+        width: 80%;
+    }
+    
+    .search_button {
+        width: 17%;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .section_input, .section_detail {
+        width: 90%;
+    }auto
+
+    .search_input {
+        width: auto;
+    }
+    
+    .search_button {
+        width: auto;
+        margin-left: 7px;
+    }
+
+    .detail_book_container {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 0px;
+    }
+}
+
+
+
+
